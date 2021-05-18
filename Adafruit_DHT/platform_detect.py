@@ -88,7 +88,7 @@ def pi_version():
     # 2709 is pi 2
     # 2835 is pi 3 
     # 2837 is pi 3b+
-    # 2711 is pi 4: Reads same as pi 3
+    # 2711 is pi 4b: Reads same as pi 3
     # Anything else is not a pi.
     with open('/proc/cpuinfo', 'r') as infile:
         cpuinfo = infile.read()
@@ -111,7 +111,7 @@ def pi_version():
         # Pi 3b+
         return 3
     elif match.group(1) == 'BCM2711': 
-        # Pi 4 but reads as a Pi 3
+        # Pi 4b but reads as a Pi 3
         return 3
     else:
         # Something else, not a pi.
